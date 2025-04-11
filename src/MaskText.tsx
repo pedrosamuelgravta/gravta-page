@@ -4,10 +4,10 @@ import { useInView, motion } from "framer-motion";
 
 type MaskTextProps = {
   phrases: string[];
-  size?: string;
+  className?: string;
 };
 
-export function MaskText({ phrases, size }: MaskTextProps) {
+export function MaskText({ phrases, ...rest }: MaskTextProps) {
   const body = useRef(null);
 
   const isInView = useInView(body, { once: true, margin: "-15%" });
@@ -26,7 +26,7 @@ export function MaskText({ phrases, size }: MaskTextProps) {
   };
 
   return (
-    <div ref={body} className={`text-[${size}]`}>
+    <div ref={body} {...rest}>
       {phrases.map((phrase, index) => {
         return (
           <div key={index} className="overflow-hidden">
@@ -35,6 +35,7 @@ export function MaskText({ phrases, size }: MaskTextProps) {
               variants={animation}
               initial="initial"
               animate={isInView ? "enter" : ""}
+              className="text-white font-medium  leading-[110%]"
             >
               {phrase}
             </motion.p>
