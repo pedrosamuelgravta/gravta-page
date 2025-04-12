@@ -86,48 +86,48 @@ export function App() {
           <div className="flex flex-col items-center mt-[10rem] mb-[9rem]">
             <MaskText
               phrases={["Gravta is a new kind", "of advertising company"]}
-              className="text-[5vw]"
+              className="text-[5vw] max-sm:text-3xl"
             />
           </div>
         </section>
         <section className="w-full h-full col-span-full">
-          <div className="flex flex-col gap-10 justify-start items-end my-30">
+          <div className="flex flex-col gap-10 justify-start items-end my-30 max-sm:mt-0">
             <MaskText
               phrases={[
                 "We are a video advertising studio",
                 "that creates and produces unique ",
                 "TV commercials at scale",
               ]}
-              className="text-[3vw]"
+              className="text-[3vw] max-sm:text-3xl"
             />
           </div>
         </section>
         <section className="w-full h-full col-span-full">
-          <div className="flex flex-col gap-10 justify-start items-start my-30">
+          <div className="flex flex-col gap-10 justify-start items-start my-30 max-sm:mt-0">
             <MaskText
               phrases={[
                 "We leverage real-time insights to unlock multiple ",
                 "audience segments and deliver targeted creative",
                 "messages that continuously evolve",
               ]}
-              className="text-[3vw]"
+              className="text-[3vw] max-sm:text-3xl"
             />
           </div>
         </section>
         <section className="w-full h-full justify-end items-end col-span-full  flex flex-col gap-20">
-          <div className="flex flex-col items-center my-30">
+          <div className="flex flex-col items-center my-30 max-sm:mt-0">
             <MaskText
               phrases={[
                 "The rules of advertising were",
                 "written before streaming",
                 "before platforms, before AI",
               ]}
-              className="text-[4vw]"
+              className="text-[4vw] max-sm:text-3xl"
             />
           </div>
         </section>
-        <section className="w-full h-full justify-center items-center col-start-2 col-end-9  flex flex-col gap-20">
-          <div className="flex flex-row justify-between w-full items-center  my-30">
+        <section className="w-full h-full justify-center items-center col-start-2 col-end-9  max-sm:col-span-full flex flex-col gap-20">
+          <div className="flex flex-row justify-between w-full items-center max-sm:items-start  my-30 max-sm:flex-col max-sm:my-10 max-sm:gap-10 max-sm:mt-0">
             <MaskText
               phrases={[
                 "Gravta operates",
@@ -139,7 +139,7 @@ export function App() {
                 "powered by two",
                 "innovations",
               ]}
-              className="text-[3vw]"
+              className="text-[3vw] max-sm:text-4xl"
             />
             <div className="relative inline-block p-20">
               <MaskText
@@ -152,7 +152,36 @@ export function App() {
                   "messages that",
                   "resonate with them.",
                 ]}
-                className="text-[2vw]"
+                className="text-[2vw] max-sm:text-3xl"
+              />
+
+              <div className="absolute top-0 left-0 w-full h-full border border-white z-10"></div>
+              <div
+                className="absolute top-0 left-0 w-full h-full border border-white z-0 "
+                style={{ transform: "translate(10px,10px)" }}
+              ></div>
+              <div
+                className="absolute top-0 left-0 w-full h-full border border-white z-0"
+                style={{ transform: "translate(20px,20px)" }}
+              ></div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full h-full justify-center items-center col-start-2 col-end-9 max-sm:col-span-full flex flex-col gap-20">
+          <div className="flex flex-row justify-between w-full items-center  my-30 max-sm:my-0">
+            <MaskText phrases={[]} className="text-[3vw]" />
+            <div className="relative inline-block p-20">
+              <MaskText
+                phrases={[
+                  "Neural network",
+                  "platform that",
+                  "continuously",
+                  "identifies audience",
+                  "segments and the",
+                  "messages that",
+                  "resonate with them.",
+                ]}
+                className="text-[2vw] max-sm:text-3xl"
               />
 
               <div className="absolute top-0 left-0 w-full h-full border border-white z-10"></div>
@@ -176,30 +205,28 @@ export function App() {
                 "impact, and optimize messaging",
                 "based on data-driven insights.",
               ]}
-              className="text-[4vw]"
+              className="text-[4vw] max-sm:text-2xl"
             />
           </div>
         </section>
         <section className="w-full h-full col-span-full ">
-          <div className="flex flex-col gap-10 justify-start items-start  my-30">
+          <div className="flex flex-col gap-10 justify-start items-start  my-30 max-sm:mt-0">
             <MaskText
               phrases={["We are The Growth Through-Creative Company®."]}
-              className="text-[3vw]"
+              className="text-[3vw] max-sm:text-2xl"
             />
           </div>
         </section>
         <section className="w-full h-full col-span-full ">
-          <div className="flex flex-col gap-10 justify-start items-end  my-30">
+          <div className="flex flex-col gap-10 justify-start items-end  my-30 mb-80 max-sm:mt-0">
             <MaskText
               phrases={["Are you ready to grow your business?"]}
-              className="text-[3vw]"
+              className="text-[3vw] max-sm:text-2xl"
             />
           </div>
         </section>
-        <section className="w-full h-full col-span-full ">
-          <div className="flex flex-col gap-10 justify-start items-start h-screen"></div>
-        </section>
-        <footer className="fixed bottom-0 left-0 lg:px-10 xl:px-20 px-10 w-full z-50">
+
+        <footer className="fixed bottom-0 left-0 max-sm:px-0 lg:px-10 xl:px-20 px-10 w-full z-50">
           <Footer />
         </footer>
       </div>
