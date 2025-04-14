@@ -5,12 +5,13 @@ import { useInView, motion } from "framer-motion";
 type MaskTextProps = {
   phrases: string[];
   className?: string;
+  isCard?: boolean;
 };
 
 export function MaskText({ phrases, ...rest }: MaskTextProps) {
   const body = useRef(null);
 
-  const isInView = useInView(body, { once: true, margin: "-15%" });
+  const isInView = useInView(body, { once: true, margin: "-5%" });
 
   const animation = {
     initial: { y: "100%" },
@@ -26,7 +27,7 @@ export function MaskText({ phrases, ...rest }: MaskTextProps) {
   };
 
   return (
-    <div ref={body} {...rest}>
+    <motion.div ref={body} {...rest}>
       {phrases.map((phrase, index) => {
         return (
           <div key={index} className="overflow-hidden">
@@ -35,13 +36,13 @@ export function MaskText({ phrases, ...rest }: MaskTextProps) {
               variants={animation}
               initial="initial"
               animate={isInView ? "enter" : ""}
-              className="text-white font-medium  leading-[110%]"
+              {...rest}
             >
               {phrase}
             </motion.p>
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
