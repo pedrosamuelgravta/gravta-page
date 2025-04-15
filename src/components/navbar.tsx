@@ -1,3 +1,5 @@
+"use client";
+
 import type React from "react";
 
 export function Navbar() {
@@ -19,7 +21,7 @@ export function Navbar() {
     <div
       className="fixed top-0 left-0 w-full h-[55px] 
       flex items-center justify-between z-50 
-      text-black text-xl bg-transparent
+      text-white text-xl bg-transparent
       max-sm:px-0 lg:px-10 xl:px-20 px-10"
     >
       <img
@@ -31,7 +33,7 @@ export function Navbar() {
       />
       <button
         onClick={scrollToForm}
-        className="border border-black px-4 py-1 text-[12px] cursor-pointer"
+        className="border border-white px-4 py-1 text-[12px] cursor-pointer"
       >
         Contact
       </button>
