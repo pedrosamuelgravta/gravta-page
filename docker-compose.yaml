@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: always
+    expose:
+      - 8081
+    networks:
+      - dokploy-network
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.front.rule=Host(`gravta.com`)
+      - traefik.http.routers.front.entrypoints=web
+      - traefik.http.routers.front.tls=true
+      - traefik.http.routers.front.tls.certresolver=letsencrypt
+      - traefik.http.services.front.loadbalancer.server.port=8081
+
+networks:
+  dokploy-network:
+    external: true
