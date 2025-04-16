@@ -85,7 +85,7 @@ export default function HomePage() {
       {showNavbar && <Navbar />}
 
       <div
-        className={`fixed top-[110px] left-0 right-0 max-h-[calc(100%-140px)] overflow-hidden z-10 lg:mx-10 xl:mx-20 mx-6`}
+        className={`fixed top-[110px] left-0 right-0 max-h-[calc(100dvh-140px)] overflow-hidden z-10 lg:mx-10 xl:mx-20 mx-6`}
       >
         <div
           ref={contentRef}
