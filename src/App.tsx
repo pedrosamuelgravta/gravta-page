@@ -68,6 +68,10 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
+    window.dispatchEvent(new Event("resize"));
+  }, []);
+
+  useEffect(() => {
     setShowNavbar(!isLogoInView);
   }, [isLogoInView]);
 
