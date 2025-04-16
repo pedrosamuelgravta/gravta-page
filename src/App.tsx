@@ -16,10 +16,18 @@ export default function HomePage() {
   const contentRef = useRef<HTMLDivElement>(null);
   const isLogoInView = useInView(logoRef, { margin: "-25%", once: false });
   const [showNavbar, setShowNavbar] = useState(false);
+  const videoOptions = [
+    "/[BIG PANEL] Blue and Gray_SPECSOK.mp4",
+    "/[BIG PANEL] Blue Gray and Purple Stack_SPECSOK.mp4",
+    "/[BIG PANEL] Model 28_SPECSOK.mp4",
+    "/[BIG PANEL] Model 29_SPECSOK.mp4",
+    "/[BIG PANELS] Model 32_SPECSOK.mp4",
+    "/[BIG PANELS] Model 33_SPECSOK.mp4",
+    "/[BIG PANELS] Model 39_SPECSOK.mp4",
+  ];
   const videoSrc = useMemo(() => {
-    return Math.random() > 0.5
-      ? "/gravta_main_panel_TEMP_01.mp4"
-      : "/gravta_main_panel_TEMP_02.mp4";
+    const randomIndex = Math.floor(Math.random() * videoOptions.length);
+    return videoOptions[randomIndex];
   }, []);
 
   useEffect(() => {
@@ -33,7 +41,7 @@ export default function HomePage() {
     // Adjust body height to match content
     function updateBodyHeight() {
       if (contentRef.current) {
-        const contentHeight = contentRef.current.getBoundingClientRect().height;
+        const contentHeight = contentRef.current.scrollHeight;
         document.body.style.height = `${contentHeight + 140}px`; // navbar + footer height
       }
     }

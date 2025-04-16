@@ -79,7 +79,7 @@ export function ContactSection() {
 
   return (
     <section
-      className="w-full col-span-full min-h-calc(100vh-140px)] h-full"
+      className="w-full col-span-full min-h-[calc(100vh-140px)] h-full"
       id="form"
     >
       <div
