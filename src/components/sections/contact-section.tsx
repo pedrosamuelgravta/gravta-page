@@ -79,7 +79,7 @@ export function ContactSection() {
 
   return (
     <section className="w-full col-span-full" id="form">
-      <div className="flex flex-row max-md:flex-col justify-around items-start mt-30 max-md:justify-start mb-60 max-md:mb-10 max-md:mt-10 h-full">
+      <div className="flex flex-row max-md:flex-col justify-around items-start mt-30 max-md:justify-start mb-60 max-md:mb-10 max-md:mt-5 h-full">
         <MaskText
           phrases={["We are re-imagining", "video advertising."]}
           className="text-[3vw] max-sm:text-[25px] text-white font-medium leading-[110%] self-start max-sm:mt-5"

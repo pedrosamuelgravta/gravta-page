@@ -4,7 +4,7 @@ export function ParallaxSection() {
   return (
     <>
       <section className="w-full h-full col-start-2 col-end-9 max-sm:col-span-full">
-        <div className="w-full mt-60 max-sm:mb-0 max-md:mt-10 flex flex-col justify-evenly gap-10">
+        <div className="w-full mt-60 max-sm:mb-0 max-md:mt-20 flex flex-col justify-evenly gap-10">
           <div className="self-center w-full">
             <MaskText
               phrases={[
