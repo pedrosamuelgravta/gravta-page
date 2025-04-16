@@ -84,12 +84,10 @@ export default function HomePage() {
 
       {showNavbar && <Navbar />}
 
-      <div
-        className={`fixed top-[110px] left-0 right-0 max-h-[calc(100dvh-140px)] overflow-hidden z-10 lg:mx-10 xl:mx-20 mx-6`}
-      >
+      <div className="fixed top-[110px] left-0 right-0 max-h-[calc(100vh-140px)] overflow-hidden z-10 lg:mx-10 xl:mx-20 mx-6">
         <div
           ref={contentRef}
-          className="grid min-sm:grid-cols-9 grid-cols-4 gap-4 gap-y-0  will-change-transform"
+          className="grid md:grid-cols-9 grid-cols-4 gap-4 gap-y-0  will-change-transform"
         >
           <HeroSection logoRef={logoRef} />
           <IntroSection />
