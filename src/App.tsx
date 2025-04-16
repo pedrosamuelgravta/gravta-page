@@ -105,6 +105,7 @@ export default function HomePage() {
           <IntroSection />
           <ParallaxSection />
           <ContactSection />
+          <ContactSection />
         </div>
       </div>
 
