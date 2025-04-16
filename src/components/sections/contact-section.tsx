@@ -78,10 +78,14 @@ export function ContactSection() {
   };
 
   return (
-    <section className="w-full h-full col-span-full" id="form">
-      <div className="flex flex-col gap-10 justify-start items-end max-sm:my-0 mb-20">
-        <div className="relative inline-block p-20 max-sm:px-0 text-black">
-          <div className="bg-white w-full h-full p-4 z-4 relative">
+    <section className="w-full col-span-full" id="form">
+      <div className="flex flex-row max-sm:flex-col justify-around items-start mt-30 max-sm:justify-start mb-60 max-sm:mb-30 max-sm:mt-10 h-full">
+        <MaskText
+          phrases={["We are re-imagining", "video advertising."]}
+          className="text-[3vw] max-sm:text-[21px] text-white font-medium leading-[110%] self-start mt-20 max-sm:mt-5"
+        />
+        <div className="relative inline-block p-20 max-sm:px-0 max-sm:pt-15 max-sm:pb-15 text-black">
+          <div className="bg-white w-full min-w-lg max-sm:min-w-min h-full p-4 z-4 relative">
             {formSubmitted ? (
               <MaskText
                 phrases={[""]}
@@ -89,8 +93,8 @@ export function ContactSection() {
               />
             ) : (
               <MaskText
-                phrases={["Find out how Gravta can help your company."]}
-                className="text-[20px] font-normal max-sm:text-lg leading-[110%] mb-2 mt-1"
+                phrases={["Find out how."]}
+                className="text-[20px] font-normal max-sm:text-[15px] leading-[110%] mb-2 mt-1"
               />
             )}
 

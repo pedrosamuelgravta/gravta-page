@@ -18,10 +18,7 @@ export function MaskText({
   const isInView = useInView(ref, { once: true, margin: "-20%" });
 
   return (
-    <div
-      ref={ref}
-      className={`overflow-hidden border-red-500 border ${className}`}
-    >
+    <div ref={ref} className={`overflow-hidden ${className}`}>
       {phrases.map((phrase, index) => (
         <div key={index} className="overflow-hidden ">
           <motion.p

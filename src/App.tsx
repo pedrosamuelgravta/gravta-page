@@ -8,7 +8,6 @@ import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 import { HeroSection } from "./components/sections/hero-section";
 import { IntroSection } from "./components/sections/intro-section";
-import { FeatureSection } from "./components/sections/feature-section";
 import { ParallaxSection } from "./components/sections/parallax-section";
 import { ContactSection } from "./components/sections/contact-section";
 
@@ -35,7 +34,7 @@ export default function HomePage() {
     function updateBodyHeight() {
       if (contentRef.current) {
         const contentHeight = contentRef.current.getBoundingClientRect().height;
-        document.body.style.height = `${contentHeight + 85}px`; // navbar + footer height
+        document.body.style.height = `${contentHeight + 140}px`; // navbar + footer height
       }
     }
 
@@ -50,7 +49,7 @@ export default function HomePage() {
         const windowHeight = window.innerHeight;
         const maxScroll =
           contentRef.current.getBoundingClientRect().height -
-          (windowHeight - 85);
+          (windowHeight - 140);
         const translateY = Math.min(scrollY, maxScroll);
         contentRef.current.style.transform = `translateY(-${translateY}px)`;
       }
@@ -73,7 +72,7 @@ export default function HomePage() {
   }, [isLogoInView]);
 
   return (
-    <main>
+    <main className="relative w-full h-screen overflow-hidden ">
       <video
         src={videoSrc}
         autoPlay
@@ -85,15 +84,14 @@ export default function HomePage() {
 
       {showNavbar && <Navbar />}
 
-      <div className="fixed top-[55px] left-0 right-0 lg:mx-10 xl:mx-20 mx-4 max-h-[calc(100vh-85px)] overflow-hidden z-10">
+      <div className="fixed top-[110px] left-0 right-0 max-h-[calc(100vh-140px)] overflow-hidden z-10 lg:mx-10 xl:mx-20 mx-6">
         <div
           ref={contentRef}
-          className="grid grid-cols-9 gap-4 will-change-transform"
+          className="grid lg:grid-cols-9 grid-cols-4 gap-4 gap-y-0  will-change-transform"
         >
           <HeroSection logoRef={logoRef} />
           <IntroSection />
           <ParallaxSection />
-          <FeatureSection />
           <ContactSection />
         </div>
       </div>
