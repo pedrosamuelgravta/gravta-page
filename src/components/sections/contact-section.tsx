@@ -78,7 +78,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="w-full col-span-full" id="form">
+    <section className="w-full col-span-full h-full" id="form">
       <div
         className="flex flex-row max-md:flex-col justify-around items-start 
                     pt-30 max-md:justify-start pb-60 max-md:pb-10 max-md:pt-5 h-full"
@@ -88,7 +88,7 @@ export function ContactSection() {
           className="text-[4vw] max-sm:text-[25px] text-white font-medium leading-[110%] self-start max-sm:mt-5"
         />
         <div className="relative max-md:pt-15 max-sm:pb-15 text-black max-md:self-center">
-          <div className="bg-white w-[25rem] max-sm:w-full max-sm:min-w-[290px] h-full p-4 z-4 relative">
+          <div className="bg-white w-[25rem] max-sm:w-full max-sm:min-w-[290px] mb-20 h-full p-4 z-4 relative">
             {formSubmitted ? (
               <MaskText
                 phrases={[""]}
