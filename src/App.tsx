@@ -105,7 +105,7 @@ export default function HomePage() {
           <IntroSection />
           <ParallaxSection />
           <ContactSection />
-          <ContactSection />
+          <div className="w-full h-[240px] col-span-full max-md:h-full"></div>
         </div>
       </div>
 
