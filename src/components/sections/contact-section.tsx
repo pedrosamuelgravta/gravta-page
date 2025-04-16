@@ -53,7 +53,7 @@ export function ContactSection() {
     const data = { fullName, companyName, jobTitle, workEmail };
 
     try {
-      const response = await fetch("https://lpforms.gravta.com/contact", {
+      const response = await fetch("https://form.gravta.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -79,13 +79,13 @@ export function ContactSection() {
 
   return (
     <section className="w-full col-span-full" id="form">
-      <div className="flex flex-row max-sm:flex-col justify-around items-start mt-30 max-sm:justify-start mb-60 max-sm:mb-30 max-sm:mt-10 h-full">
+      <div className="flex flex-row max-md:flex-col justify-around items-start mt-30 max-md:justify-start mb-60 max-md:mb-10 max-md:mt-10 h-full">
         <MaskText
           phrases={["We are re-imagining", "video advertising."]}
-          className="text-[3vw] max-sm:text-[21px] text-white font-medium leading-[110%] self-start mt-20 max-sm:mt-5"
+          className="text-[3vw] max-sm:text-[25px] text-white font-medium leading-[110%] self-start max-sm:mt-5"
         />
-        <div className="relative inline-block p-20 max-sm:px-0 max-sm:pt-15 max-sm:pb-15 text-black">
-          <div className="bg-white w-full min-w-lg max-sm:min-w-min h-full p-4 z-4 relative">
+        <div className="relative inline-block max-md:pt-15 max-sm:pb-15 text-black max-md:self-center">
+          <div className="bg-white w-[25rem] max-sm:w-full h-full p-4 z-4 relative">
             {formSubmitted ? (
               <MaskText
                 phrases={[""]}

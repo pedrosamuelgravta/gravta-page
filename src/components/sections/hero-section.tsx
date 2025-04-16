@@ -8,14 +8,14 @@ interface HeroSectionProps {
 export function HeroSection({ logoRef }: HeroSectionProps) {
   return (
     <>
-      <section className="w-full h-screen col-span-full grid">
+      <section className="w-full h-svh col-span-full grid grid-rows-5">
         <svg
           width="580"
           height="100"
           viewBox="0 0 580 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full mt-20 max-sm:mt-10 row-start-2 row-end-2 "
+          className="w-full h-full col-span-full row-start-3 row-end-6"
           ref={logoRef}
         >
           <path
@@ -47,49 +47,13 @@ export function HeroSection({ logoRef }: HeroSectionProps) {
             fill="white"
           />
         </svg>
-        {/* <svg
-          id="Layer_1"
-          xmlns="http://www.w3.org/2000/svg"
-          width="3000"
-          height="1000"
-          version="1.1"
-          className="w-full  mt-10 max-sm:mt-20 row-start-2 row-end-2"
-          ref={logoRef}
-        >
-          <g>
-            <path
-              fill="white"
-              d="M760.9,489.6h43.1v-68.9h-24.3v-66.9h-22.3v-66.9h-109.4v66.9h-22.3v66.9h-24.3v68.9h42.8c4.6,0,8.7-3.2,9.8-7.7l4.4-17.5c2.3-9,10.4-15.3,19.7-15.3h48.1c8.9,0,16.8,5.9,19.4,14.4l5.7,18.9c1.3,4.3,5.2,7.2,9.7,7.2ZM684.3,376.5l7.9-23.8c1.4-4.1,5.3-6.9,9.6-6.9h1.6c4.4,0,8.2,2.8,9.6,6.9l7.9,23.8c3.9,11.8-4.9,24-17.3,24h-2.1c-12.4,0-21.2-12.2-17.3-24Z"
-            />
-            <path
-              fill="white"
-              d="M581.1,489.6v-68.9h-20.3v-32.4h28.4v-68.9h-28.4v-32.4h-141.9v202.6h52.6v-42.9c0-11,9-19.9,20-19.9h1.2c6.9,0,13.2,3.9,16.2,10.1l23.3,48.1c1.4,2.8,4.2,4.6,7.3,4.6h41.5ZM534.5,356.9h0c0,12.9-10.4,23.3-23.3,23.3h-29.4c-5.6,0-10.1-4.5-10.1-10.1v-26.3c0-5.6,4.5-10.1,10.1-10.1h29.4c12.9,0,23.3,10.4,23.3,23.3Z"
-            />
-            <path
-              fill="white"
-              d="M283.3,374.1h115.5v83h-22.2c0,0-.1,32.5-.1,32.5h-137.7v-20.3c-.1,0-22.3,0-22.3,0v-24.3h-20.2v-101.3c0,0,20.2,0,20.2,0v-36.4c0,0,22.3-.1,22.3-.1v-20.2h137.7c0,0,0,32.3,0,32.3h22.3c0,.1,0,40.6,0,40.6h-22.2c-30.4,0-32.4-20.3-75-20.3s-48.6,16.2-48.6,48.6,22.3,50.7,48.6,50.7,38-7.2,43.4-14.5c3-4.1.2-9.8-4.9-9.8h-56.6s0-40.5,0-40.5Z"
-            />
-          </g>
-          <path
-            fill="white"
-            d="M348,712.5v-68.9h28.4v-66.9h22.3v-66.9h-49.8c-5.3,0-10,3.5-11.6,8.5l-30.2,116.5c-3,9.5-16.4,9.5-19.3,0l-30.2-116.5c-1.6-5.1-6.3-8.5-11.6-8.5h-49.8v66.9h22.3v66.9h28.4v68.9h101.3Z"
-          />
-          <path
-            fill="white"
-            d="M599.3,509.9h-180.4v52.7h34.4c15.7,0,28.4,12.7,28.4,28.4v121.6h52.7v-83.1h14.2v-66.9h50.7v-52.7Z"
-          />
-          <path
-            fill="white"
-            d="M760.9,712.5h43.1v-68.9h-24.3v-66.9h-22.3v-66.9h-109.4v66.9h-22.3v66.9h-24.3v68.9h42.8c4.6,0,8.7-3.2,9.8-7.7l4.4-17.5c2.3-9,10.4-15.3,19.7-15.3h48.1c8.9,0,16.8,5.9,19.4,14.4l5.7,18.9c1.3,4.3,5.2,7.2,9.7,7.2ZM684.3,599.4l7.9-23.8c1.4-4.1,5.3-6.9,9.6-6.9h1.6c4.4,0,8.2,2.8,9.6,6.9l7.9,23.8c3.9,11.8-4.9,24-17.3,24h-2.1c-12.4,0-21.2-12.2-17.3-24Z"
-          />
-        </svg> */}
       </section>
 
       <section className="w-full h-full justify-end items-start col-span-full row-start-2 row-end-3 flex flex-col gap-20">
         <div className="flex flex-col items-center mt-[0rem] mb-[0rem] max-sm:my-0">
           <MaskText
             phrases={["Gravta is a new kind", "of advertising company."]}
-            className="text-[3vw] max-sm:text-[17px] text-white font-medium leading-[110%]"
+            className="text-[3vw] max-sm:text-low text-white font-medium leading-[110%]"
           />
         </div>
       </section>
