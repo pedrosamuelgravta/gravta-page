@@ -31,7 +31,11 @@ export function MaskText({
             }}
             className="whitespace-pre-line"
           >
-            {phrase}
+            {/<[a-z][\s\S]*>/i.test(phrase) ? (
+              <span dangerouslySetInnerHTML={{ __html: phrase }} />
+            ) : (
+              phrase
+            )}
           </motion.p>
         </div>
       ))}

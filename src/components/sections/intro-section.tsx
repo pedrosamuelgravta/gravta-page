@@ -18,7 +18,7 @@ export function IntroSection() {
         <div className="flex flex-col gap-10 justify-start items-start mt-60 max-sm:mt-20 max-sm:mb-0">
           <MaskText
             phrases={[
-              "We leverage real-time insights and AI to unlock multiple audience segments and deliver targeted creative messages that continuously evolve.",
+              "We leverage real-time insights and AI to unlock multiple audience segments, delivering targeted creative messages that continuously evolve.",
             ]}
             className="text-[4vw] max-sm:text-high text-white font-medium leading-[110%]"
           />
@@ -29,7 +29,7 @@ export function IntroSection() {
         <div className="flex flex-col items-center mt-30 max-sm:mt-10 max-sm:mb-0">
           <MaskText
             phrases={[
-              "The rules of advertising were written before streaming, before platforms, before AI.",
+              "The rules of advertising were written before streaming, before platforms, before AI — we’re <s>rewriting</s> reimagining them.",
             ]}
             className="text-[4vw] max-sm:text-high text-white font-medium leading-[110%]"
           />

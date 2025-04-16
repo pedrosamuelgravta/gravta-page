@@ -15,7 +15,7 @@ export function HeroSection({ logoRef }: HeroSectionProps) {
           viewBox="0 0 580 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full col-span-full row-start-3 row-end-6"
+          className="w-full h-full col-span-full row-start-3 row-end-5"
           ref={logoRef}
         >
           <path
@@ -52,7 +52,7 @@ export function HeroSection({ logoRef }: HeroSectionProps) {
       <section className="w-full h-full justify-end items-start col-span-full row-start-2 row-end-3 flex flex-col gap-20">
         <div className="flex flex-col items-center mt-[0rem] mb-[0rem] max-sm:my-0">
           <MaskText
-            phrases={["Gravta is a new kind", "of advertising company."]}
+            phrases={["Gravta is a new kind of advertising venture."]}
             className="text-[3vw] max-sm:text-low text-white font-medium leading-[110%]"
           />
         </div>
