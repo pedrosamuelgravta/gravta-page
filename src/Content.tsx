@@ -20,6 +20,9 @@ export const Content = ({
       duration: 1.2,
     });
 
+    // exponha globalmente
+    (window as any).lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -31,7 +34,10 @@ export const Content = ({
 
   return (
     <div className="flex-grow h-full relative overflow-y-auto z-10">
-      <div ref={scrollRef} className="flex-1 overflow-y-auto h-full">
+      <div
+        ref={scrollRef}
+        className="flex-1 overflow-y-auto h-full max-sm:overflow-hidden"
+      >
         <div className="grid grid-cols-9 max-sm:grid-cols-4 gap-4 gap-y-0  lg:mx-10 xl:mx-20 mx-6">
           <HeroSection logoRef={logoRef} />
           <IntroSection />
