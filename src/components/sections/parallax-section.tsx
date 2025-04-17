@@ -14,7 +14,7 @@ export function ParallaxSection() {
             />
           </div>
 
-          <aside className="flex flex-col justify-center items-center h-full mt-90 max-lg:mt-5 max-md:mt-5 gap-80 max-sm:gap-10 w-full">
+          <aside className="flex flex-col justify-center items-center h-full mt-[40rem] max-lg:mt-5 max-md:mt-5 gap-80 max-sm:gap-10 w-full">
             <div className="relative ">
               <img
                 src="/Group55.svg"
