@@ -6,7 +6,7 @@ import { Footer } from "./components/footer";
 
 import { Content } from "./Content";
 
-import ReactGA from "react-ga4";
+// import ReactGA from "react-ga4";
 
 export default function HomePage() {
   const logoRef = useRef<SVGSVGElement>(null);
@@ -26,15 +26,15 @@ export default function HomePage() {
     return videoOptions[randomIndex];
   }, []);
 
-  useEffect(() => {
-    ReactGA.initialize("G-9Z7XW5TQYN");
+  // useEffect(() => {
+  //   ReactGA.initialize("G-9Z7XW5TQYN");
 
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
-      title: "App.tsx",
-    });
-  }, []);
+  //   ReactGA.send({
+  //     hitType: "pageview",
+  //     page: window.location.pathname,
+  //     title: "App.tsx",
+  //   });
+  // }, []);
 
   useEffect(() => {
     setShowNavbar(!isLogoInView);
