@@ -4,8 +4,8 @@ export function ParallaxSection() {
   return (
     <>
       <section className="w-full h-full col-start-2 col-end-9 max-sm:col-span-full">
-        <div className="w-full mt-60 max-sm:mb-0 max-md:mt-20 flex flex-col justify-evenly gap-10">
-          <div className="self-center w-full">
+        <div className="w-full mt-60 max-sm:mb-0 max-md:mt-20 flex flex-row max-sm:flex-col justify-evenly gap-10">
+          <div className="self-start w-full sticky max-sm:relative top-[25%]">
             <MaskText
               phrases={[
                 "Our Human-AI workflow operates at the intersection of cinematography, data science, and advertising — powered by two innovations:",
@@ -14,7 +14,7 @@ export function ParallaxSection() {
             />
           </div>
 
-          <aside className="flex flex-row max-md:flex-col justify-center items-center h-full mt-30 max-lg:mt-5 max-md:mt-5 gap-32 max-sm:gap-10 w-full">
+          <aside className="flex flex-col justify-center items-center h-full mt-90 max-lg:mt-5 max-md:mt-5 gap-80 max-sm:gap-10 w-full">
             <div className="relative ">
               <img
                 src="/Group55.svg"

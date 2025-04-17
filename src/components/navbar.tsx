@@ -7,23 +7,16 @@ export function Navbar() {
     e.preventDefault();
     const formElement = document.getElementById("form");
     if (formElement) {
-      // If using Lenis globally, we can access it through window
       if ((window as any).lenis) {
         (window as any).lenis.scrollTo("#form");
       } else {
-        // Fallback to regular scrolling
         formElement.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
 
   return (
-    <div
-      className="fixed top-0 left-0 w-full h-[110px] 
-      flex items-center justify-between z-50 
-      text-white text-xl bg-transparent
-      max-sm:px-6 lg:px-10 xl:px-20 px-10 "
-    >
+    <div className="w-full h-[110px] flex items-center justify-between z-20 text-white text-xl bg-transparent max-sm:px-6 lg:px-10 xl:px-20 px-10">
       <img
         src="/Gravta.png"
         alt="Gravta Logo"

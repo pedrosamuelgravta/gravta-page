@@ -8,14 +8,16 @@ interface HeroSectionProps {
 export function HeroSection({ logoRef }: HeroSectionProps) {
   return (
     <>
-      <section className="w-full h-svh col-span-full grid grid-rows-5">
+      {/* <section className="w-full h-svh col-span-full grid grid-rows-5"></section> */}
+
+      <section className="w-full h-full justify-end items-start col-span-full row-start-1 row-end-4 flex flex-col gap-20">
         <svg
           width="580"
           height="100"
           viewBox="0 0 580 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full col-span-full row-start-3 row-end-5"
+          className="w-full h-full 2xl:mt-[calc(100dvh-27%)] xl:mt-[calc(100dvh-32%)] lg:mt-[calc(100dvh-32%)] md:mt-[calc(100dvh-35%)] mt-[calc(100dvh-65%)]"
           ref={logoRef}
         >
           <path
@@ -47,9 +49,6 @@ export function HeroSection({ logoRef }: HeroSectionProps) {
             fill="white"
           />
         </svg>
-      </section>
-
-      <section className="w-full h-full justify-end items-start col-span-full row-start-2 row-end-3 flex flex-col gap-20">
         <div className="flex flex-col items-center mt-[0rem] mb-[0rem] max-sm:my-0">
           <MaskText
             phrases={["Gravta is a new kind of advertising venture."]}
