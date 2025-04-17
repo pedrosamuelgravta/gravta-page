@@ -13,9 +13,11 @@ export function ContactSection() {
     jobTitle: "",
     workEmail: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setLoading(true);
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
 
@@ -38,10 +40,14 @@ export function ContactSection() {
 
     if (!workEmail) {
       errors.workEmail = "Work email is required.";
+      setLoading(false);
+      return;
     } else {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(workEmail)) {
         errors.workEmail = "Please enter a valid email.";
+        setLoading(false);
+        return;
       }
     }
 
@@ -63,17 +69,20 @@ export function ContactSection() {
 
       if (response.ok) {
         setFormSubmitted(true);
+        setLoading(false);
       } else {
         setFormErrors((prev) => ({
           ...prev,
           workEmail: result.message || "Submission error.",
         }));
+        setLoading(false);
       }
     } catch (error) {
       setFormErrors((prev) => ({
         ...prev,
         workEmail: "An error occurred while sending. Please try again later.",
       }));
+      setLoading(false);
     }
   };
 
@@ -200,9 +209,11 @@ export function ContactSection() {
 
                 <button
                   type="submit"
-                  className="bg-[#2C2C2C] text-white py-2 px-4 mb-1 hover:bg-[#1A1A1A] transition duration-300 ease-in-out cursor-pointer"
+                  className="bg-[#2C2C2C] text-white py-2 px-4 mb-1 hover:bg-[#1A1A1A] transition duration-300 ease-in-out cursor-pointer 
+                    disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={loading}
                 >
-                  Submit
+                  {loading ? "Submitting..." : "Submit"}
                 </button>
               </form>
             ) : (
