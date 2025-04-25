@@ -26,16 +26,6 @@ export default function HomePage() {
     return videoOptions[randomIndex];
   }, []);
 
-  // useEffect(() => {
-  //   ReactGA.initialize("G-9Z7XW5TQYN");
-
-  //   ReactGA.send({
-  //     hitType: "pageview",
-  //     page: window.location.pathname,
-  //     title: "App.tsx",
-  //   });
-  // }, []);
-
   useEffect(() => {
     setShowNavbar(!isLogoInView);
   }, [isLogoInView]);

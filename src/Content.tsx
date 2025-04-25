@@ -20,6 +20,13 @@ export const Content = ({
       duration: 1.2,
     });
 
+    function resetLenisLimit() {
+      lenis.resize();
+    }
+
+    window.addEventListener("load", resetLenisLimit);
+    window.addEventListener("resize", resetLenisLimit);
+
     // exponha globalmente
     (window as any).lenis = lenis;
 
@@ -29,7 +36,11 @@ export const Content = ({
     }
     requestAnimationFrame(raf);
 
-    return () => lenis.destroy();
+    return () => {
+      window.removeEventListener("load", resetLenisLimit);
+      window.removeEventListener("resize", resetLenisLimit);
+      lenis.destroy();
+    };
   }, []);
 
   return (
