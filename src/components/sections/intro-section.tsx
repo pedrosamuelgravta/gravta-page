@@ -7,7 +7,7 @@ export function IntroSection() {
         <div className="flex flex-col gap-10 justify-start items-end mt-30 max-sm:mt-10 max-sm:mb-0">
           <MaskText
             phrases={[
-              "We are a video strategy studio that creates and produces unique TV commercials at scale.",
+              "We are a video strategy studio built to solve the challenges of premium video advertising at scale.",
             ]}
             className="text-[3vw] max-sm:text-low text-white font-medium leading-[110%]"
           />
